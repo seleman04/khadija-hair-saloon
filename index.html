@@ -1,32 +1,222 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>code</title>
-        </head>
-        <body>
-           <h1 style="text-align:center;"><b>WELCOME TO ROYAL SALOON</b></h1>
-       <div style="text-align: center;">
-            <img style="text-align: center;"  src="image.jpg" alt="Royal Salon main image" width="300" height="300">
-            </div> 
-           <h1 style="text-align: center;">BEAUTY HAIR SALOON</h1>
-           <p> <b>WELCOME TO ROYAL HAIR PRODUCTS SALOON. <br>WE PROVIDE COMPREHESIVE HAIR SERVICES, PRODUCTS AND STYLES TO ENHANCE YOUR LOOK AND COMFORT. <br>BOOK YOUR SERVICE NOW AND RECEIVE 20% OFF </b></p> <br> <br>
-           <details>
-            <summary> <b>CLICK THE ARROW FOR SOME OF OUR SERVICES </b></summary>
-            <img src="1.JPG" alt="Client with neat small box braids seen from above, centered part visible, salon workstation and colorful cape in background, calm professional atmosphere" width="200" height="200">
-            <img src="2.JPG" alt="Stylist weaving synthetic hair into medium box braids on a seated client, hands and tools visible on the worktable, focused professional tone" width="300" height="200">
-            <img src="3.JPG" alt="Close up of finished thin box braids falling over the shoulder, smooth texture and uniform thickness, salon mirror out of focus, relaxed tone" width="200" height="200">
-            <img src="4.JPG" alt="Client with medium box braids finished with decorative beads at the ends, seated in a salon chair with a patterned cape, welcoming atmosphere" width="250" height="200">
-            <img src="5.JPG" alt="Side view of a client with long thin box braids cascading over the shoulder, clean parting and polished finish, salon counter and products visible in background, confident tone" width="300" height="200">
-            <img src="6.JPG" alt="Close up of scalp showing precise braid partings and neat cornrows feeding into box braids, stylist hands adjusting a braid, meticulous professional tone" width="300" height="200">
-            <img src="7.JPG" alt="Multiple finished box braids laid out to show uniform length and thickness, neutral salon background, polished and neat tone" width="300" height="200">
-            <img src="8.JPG" alt="Back view of head with medium-length box braids and a clean center part, straight ends and a tidy finish, salon cape and chair visible, calm atmosphere" width="200" height="200">
-        </details>
-             <details>
-                 <summary> <b>CLICK THE ARROW FOR CONTANT INFORMATION </b></summary>   
-        <p><b> CONTACT:0786971951 <br>WHATSAPP: <a href="https://wa.me/+255786971951?text=more information" target="_blank" rel="noopener">CHAT WITH US</a> <br> EMAIL:<a href="mailto:suleimanhb04@gmail.com">SEND EMAIL</a>  <br> khadija_hairs_saloon in all social media</b></p></details> 
-            <p><b> FOLLOW INFORMATION ABOVE</b></p> <br>
-           <b style="text-align: center;">YOU'RE WELCOME</b>
-     </body>
-      </html>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Royal Salon</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+        }
+
+        header {
+            background-color: #111;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .main-image img {
+            width: 300px;
+            height: 300px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: #b68d40;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        details {
+            margin-top: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        summary {
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .contact a {
+            color: #b68d40;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            margin-top: 30px;
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        @media (max-width: 600px) {
+            .gallery img {
+                width: 100%;
+                height: auto;
+            }
+
+            .main-image img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>ROYAL SALON</h1>
+</header>
+
+<div class="container">
+
+    <div class="main-image">
+        <img src="image.jpg" alt="Royal Salon main image">
+    </div>
+
+    <h2>BEAUTY HAIR SALON</h2>
+
+    <p>
+        <b>
+            Welcome to Royal Hair Products Salon.<br>
+            We provide comprehensive hair services, products, and styles to enhance your look and comfort.<br>
+            Book your service now and receive <span style="color:#b68d40;">20% OFF</span>.
+        </b>
+    </p>
+
+    <details>
+        <summary>Our Services</summary>
+
+        <div class="gallery">
+            <img src="1.JPG">
+            <img src="2.JPG">
+            <img src="3.JPG">
+            <img src="4.JPG">
+            <img src="5.JPG">
+            <img src="6.JPG">
+            <img src="7.JPG">
+            <img src="8.JPG">
+        </div>
+    </details>
+
+    <details>
+        <summary>Contact Information</summary>
+
+        <p class="contact">
+            <b>
+                📞 Contact: 0786971951 <br><br>
+
+                💬 WhatsApp:
+                <a href="https://wa.me/+255786971951?text=more information" target="_blank">
+                    Chat with us
+                </a>
+                <br><br>
+
+                📧 Email:
+                <a href="mailto:suleimanhb04@gmail.com">
+                    Send Email
+                </a>
+                <br><br>
+
+                📱 Social Media:<br>
+                khadija_hairs_saloon
+            </b>
+        </p>
+    </details>
+<details>
+    <summary>Book an Appointment</summary>
+
+    <form action="https://formspree.io/f/xlgogejr" method="POST" style="margin-top:15px; text-align:left;">
+        
+        <label><b>Full Name:</b></label><br>
+        <input type="text" name="name" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        <label><b>Phone Number:</b></label><br>
+        <input type="tel" name="phone" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        <label><b>Select Service:</b></label><br>
+        <select name="service" required style="width:100%; padding:8px; margin:5px 0;">
+            <option value="">-- Choose Service --</option>
+            <option>Hair Styling</option>
+            <option>Braiding</option>
+            <option>Hair Treatment</option>
+            <option>Hair Coloring</option>
+        </select><br>
+
+        <label><b>Select Date:</b></label><br>
+        <input type="date" name="date" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        <label><b>Select Time:</b></label><br>
+        <input type="time" name="time" required style="width:100%; padding:8px; margin:5px 0;"><br>
+
+        <label><b>Additional Notes:</b></label><br>
+        <textarea name="notes" rows="3" style="width:100%; padding:8px; margin:5px 0;"></textarea><br>
+
+        <!-- Optional hidden field -->
+        <input type="hidden" name="_subject" value="New Salon Booking">
+
+        <button type="submit" style="
+            background:#b68d40;
+            color:white;
+            border:none;
+            padding:10px 20px;
+            margin-top:10px;
+            cursor:pointer;
+            border-radius:5px;">
+            Book Now
+        </button>
+
+    </form>
+</details>
+</div>
+
+<footer>
+    YOU'RE WELCOME
+</footer>
+
+</body>
+</html>
