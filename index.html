@@ -2,6 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+
+    <!-- ✅ IMPORTANT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Royal Salon</title>
 
     <style>
@@ -10,6 +14,7 @@
             font-family: Arial, sans-serif;
             background-color: #f8f8f8;
             color: #333;
+            font-size: 17px;
         }
 
         header {
@@ -32,9 +37,13 @@
             text-align: center;
         }
 
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
         .main-image img {
             width: 300px;
-            height: 300px;
             border-radius: 10px;
             margin-top: 15px;
         }
@@ -45,7 +54,6 @@
         }
 
         p {
-            font-size: 16px;
             line-height: 1.6;
         }
 
@@ -83,12 +91,47 @@
             font-weight: bold;
         }
 
+        /* ✅ BETTER FORM SPACING */
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 15px 0;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        /* ✅ BIGGER BUTTONS */
+        button {
+            font-size: 18px;
+            padding: 14px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
         footer {
             margin-top: 30px;
             background: #111;
             color: white;
             text-align: center;
             padding: 15px;
+        }
+
+        /* ✅ STICKY BUTTON */
+        .sticky-book {
+            position: fixed;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #b68d40;
+            color: white;
+            padding: 15px 25px;
+            font-size: 18px;
+            border-radius: 30px;
+            text-align: center;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
         }
 
         @media (max-width: 600px) {
@@ -99,7 +142,6 @@
 
             .main-image img {
                 width: 100%;
-                height: auto;
             }
         }
     </style>
@@ -122,8 +164,8 @@
     <p>
         <b>
             Welcome to Royal Hair Products Salon.<br>
-            We provide comprehensive hair services, products, and styles to enhance your look and comfort.<br>
-            Book your service now and receive <span style="color:#b68d40;">20% OFF</span>.
+            We provide comprehensive hair services, products, and styles.<br>
+            Get <span style="color:#b68d40;">20% OFF</span>.
         </b>
     </p>
 
@@ -135,10 +177,6 @@
             <img src="2.JPG">
             <img src="3.JPG">
             <img src="4.JPG">
-            <img src="5.JPG">
-            <img src="6.JPG">
-            <img src="7.JPG">
-            <img src="8.JPG">
         </div>
     </details>
 
@@ -147,90 +185,51 @@
 
         <p class="contact">
             <b>
-                📞 Contact: 0786971951 <br><br>
+                📞 0786971951 <br><br>
 
                 💬 WhatsApp:
-                <a href="https://wa.me/+255786971951?text=more information" target="_blank">
-                    Chat with us
-                </a>
+                <a href="https://wa.me/255786971951" target="_blank">Chat</a>
                 <br><br>
 
                 📧 Email:
-                <a href="mailto:suleimanhb04@gmail.com">
-                    Send Email
-                </a>
-                <br><br>
-
-                📱 Social Media:<br>
-                khadija_hairs_saloon
+                <a href="mailto:suleimanhb04@gmail.com">Send Email</a>
             </b>
         </p>
     </details>
-<details>
-    <summary>Book an Appointment</summary>
 
-        <form id="bookingForm" action="https://formspree.io/f/xlgogejr" method="POST" style="margin-top:15px; text-align:left;">
+    <details>
+        <summary>Book an Appointment</summary>
 
+        <form id="bookingForm" action="https://formspree.io/f/xlgogejr" method="POST">
 
-       
+            <label><b>Full Name:</b></label>
+            <input type="text" name="name" required>
 
-        <label><b>Full Name:</b></label><br>
-        <input type="text" name="name" required style="width:100%; padding:8px; margin:5px 0;"><br>
+            <label><b>Phone Number:</b></label>
+            <input type="tel" name="phone" required>
 
-        <label><b>Phone Number:</b></label><br>
-        <input type="tel" name="phone" required style="width:100%; padding:8px; margin:5px 0;"><br>
+            <label><b>Select Service:</b></label>
+            <select name="service" required>
+                <option value="">-- Choose Service --</option>
+                <option>Hair Styling</option>
+                <option>Braiding</option>
+            </select>
 
-        <label><b>Select Service:</b></label><br>
-        <select name="service" required style="width:100%; padding:8px; margin:5px 0;">
-            <option value="">-- Choose Service --</option>
-            <option>Hair Styling</option>
-            <option>Braiding</option>
-            <option>Hair Treatment</option>
-            <option>Hair Coloring</option>
-        </select><br>
+            <label><b>Date:</b></label>
+            <input type="date" name="date" required>
 
-        <label><b>Select Date:</b></label><br>
-        <input type="date" name="date" required style="width:100%; padding:8px; margin:5px 0;"><br>
+            <label><b>Time:</b></label>
+            <input type="time" name="time" required>
 
-        <label><b>Select Time:</b></label><br>
-        <input type="time" name="time" required style="width:100%; padding:8px; margin:5px 0;"><br>
+            <label><b>Notes:</b></label>
+            <textarea name="notes"></textarea>
 
-        <label><b>Additional Notes:</b></label><br>
-        <textarea name="notes" rows="3" style="width:100%; padding:8px; margin:5px 0;"></textarea><br>
+            <button type="submit" style="background:#b68d40; color:white; border:none;">
+                Book Now
+            </button>
 
-        <!-- Optional hidden field -->
-        <input type="hidden" name="_subject" value="New Salon Booking">
-
-        <button type="submit" style="
-            background:#b68d40;
-            color:white;
-            border:none;
-            padding:10px 20px;
-            margin-top:10px;
-            cursor:pointer;
-            border-radius:5px;">
-            Book Now
-        </button>
-
-    </form>
-</details>
-
-<h2>Find Us</h2>
-
-  <!-- Open in Maps Button -->
-  <a href="https://www.google.com/maps?q=Five Star Hall" target="_blank" style="text-decoration:none;">
-    <button style="
-      margin-top:10px;
-      padding:12px 20px;
-      background-color:#4285F4;
-      color:white;
-      border:none;
-      border-radius:6px;
-      cursor:pointer;
-      font-size:16px;">
-      📍 Open in Maps
-    </button>
-  </a>
+        </form>
+    </details>
 
 </div>
 
@@ -238,43 +237,27 @@
     YOU'RE WELCOME
 </footer>
 
+<!-- ✅ STICKY BUTTON -->
+<a href="#bookingForm">
+  <div class="sticky-book">📅 Book Now</div>
+</a>
 
 <script>
-  const form = document.getElementById("bookingForm");
+const form = document.getElementById("bookingForm");
 
-  form.addEventListener("submit", function() {
+form.addEventListener("submit", function() {
+    const name = form.name.value;
+    const phone = form.phone.value;
+    const service = form.service.value;
+    const date = form.date.value;
+    const time = form.time.value;
+    const notes = form.notes.value;
 
-    // Get values from form
-    const name = form.querySelector('input[name="name"]').value;
-    const phone = form.querySelector('input[name="phone"]').value;
-    const service = form.querySelector('select[name="service"]').value;
-    const date = form.querySelector('input[name="date"]').value;
-    const time = form.querySelector('input[name="time"]').value;
-    const notes = form.querySelector('textarea[name="notes"]').value;
+    const whatsappURL = `https://wa.me/255786971951?text=Booking:%0AName:${name}%0APhone:${phone}%0AService:${service}%0ADate:${date}%0ATime:${time}%0ANotes:${notes}`;
 
-    // Your WhatsApp number (NO + sign)
-    const whatsappNumber = "255786971951";
-
-    // Create message
-    const message = `Hello, I want to book:%0A
-Name: ${name}%0A
-Phone: ${phone}%0A
-Service: ${service}%0A
-Date: ${date}%0A
-Time: ${time}%0A
-Notes: ${notes}`;
-
-    // Open WhatsApp
-    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${message}`;
     window.open(whatsappURL, "_blank");
-
-    // Optional: reset form after sending
-    setTimeout(() => {
-      form.reset();
-    }, 500);
-  });
+});
 </script>
-
 
 </body>
 </html>
