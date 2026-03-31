@@ -144,6 +144,26 @@
                 width: 100%;
             }
         }
+
+        .services-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.services-table th {
+    background: #f5f5f5;
+}
+
+.services-table th,
+.services-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.services-table td:last-child {
+    text-align: right; /* aligns prices nicely */
+}
+
     </style>
 </head>
 
@@ -156,7 +176,7 @@
 <div class="container">
 
     <div class="main-image">
-        <img src="image.jpg" alt="Royal Salon main image">
+        <img src="image.png" alt="Royal Salon main image">
     </div>
 
     <h2>BEAUTY HAIR SALON</h2>
@@ -170,18 +190,35 @@
     </p>
 
     <details>
-        <summary>Our Services{image}</summary>
+        <summary>Services & Pricing</summary>
+<summary>Our Services</summary>
 
-        <div class="gallery">
-            <img src="1.JPG">
-            <img src="2.JPG">
-            <img src="3.JPG">
-            <img src="4.JPG">
-            <img src="5.JPG">
-            <img src="6.JPG">
-            <img src="7.JPG">
-            <img src="8.JPG">
-        </div>
+<table class="services-table">
+    <tr>
+        <th>Service</th>
+        <th>Price</th>
+    </tr>
+    <tr>
+        <td>wash + set-rollers</td>
+        <td>5000</td>
+    </tr>
+    <tr>
+        <td>wash + blowdry</td>
+        <td>7000</td>
+    </tr>
+    <tr>
+        <td>flat iron</td>
+        <td>7000</td>
+        </tr>
+    <tr>
+        <td>wash + steaming + blowdry</td>
+        <td>10000</td>
+    </tr>
+    <tr>
+        <td>relaxer application</td>
+        <td>15000</td>
+</table>
+        
     </details>
 
     <details>
@@ -274,4 +311,6 @@ form.addEventListener("submit", function() {
 
 </body>
 </html>
+
+
 
